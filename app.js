@@ -13,10 +13,14 @@ boxPlayer.forEach((box)=>{
     box.addEventListener("click",()=>{
         if(playerO){
             box.innerText="O";
+            box.style.color="yellow";
+            box.style.boxShadow="-3px -2px 9px yellow";
             playerO=false;
         }
         else{
             box.innerText="X";
+            box.style.color="#EF2D56";
+            box.style.boxShadow="-3px -2px 9px #EF2D56";
             playerO=true;
         }
         box.disabled=true;
@@ -37,7 +41,7 @@ const checkWinner=()=>{
                 disableBoxes();
             }
            else if(count==9){
-            msg.innerHTML="Match is draw";
+            msg.innerText="The game ends in a draw. \n\nTry again to break the deadlock!";
             msgContainer.classList.remove('hidden');
            }
         }
@@ -45,7 +49,7 @@ const checkWinner=()=>{
 }
 
 const showWinner=(winner)=>{
-    msg.innerText = `The winner is ${winner}!`;
+    msg.innerText = `YAAYYY!! The winner is ${winner}!`;
     msgContainer.classList.remove('hidden');
     disableBoxes();
 }
@@ -65,6 +69,7 @@ const resetGame=()=>{
 
 const enableBoxes=()=>{
     for(let box of boxPlayer){
+        box.style.boxShadow = "-3px -2px 9px #4C4C47";
         box.disabled=false;
         box.innerText="";
     }
