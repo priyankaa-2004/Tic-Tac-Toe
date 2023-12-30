@@ -7,8 +7,8 @@ The game features a clean and user-friendly interface, providing visual feedback
 
 # Features
 * Players take turns to place their marks (X or O) in the grid by clicking on the boxes.
-#^  The game announces the winner when a player forms a line of three of their marks.
-..*In case of a draw (when all boxes are filled and no winner), the game declares a draw.
-..*Reset functionality to start a new game at any time.
-..*The game utilizes basic CSS styling for a simple and responsive design.
+* The game announces the winner when a player forms a line of three of their marks.
+* In case of a draw (when all boxes are filled and no winner), the game declares a draw.
+* Reset functionality to start a new game at any time.
+* The game utilizes basic CSS styling for a simple and responsive design.
 
